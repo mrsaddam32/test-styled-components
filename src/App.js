@@ -11,6 +11,13 @@ const Name = styled.h1`
   font-family: Arial;
 `;
 
+const Column = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
 const Button = styled.button`
   border: none;
   display: block;
@@ -53,12 +60,14 @@ export default function App() {
   return (
     <div>
       <Name>Neoline</Name>
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-      <Button onClick={handleBtnClick} isClicked={btnClicked}>
-        {btnClicked ? 'Hello,Stackblitz' : 'Not Clicked'}
-      </Button>
+      <Column>
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+        <Button onClick={handleBtnClick} isClicked={btnClicked}>
+          {btnClicked ? 'Hello,Stackblitz' : 'Not Clicked'}
+        </Button>
+      </Column>
       <Counter></Counter>
     </div>
   );

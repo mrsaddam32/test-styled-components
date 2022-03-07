@@ -5,6 +5,12 @@ const Container = styled.div`
   margin-top: 20px;
 `;
 
+const Column = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 const Number = styled.p`
   text-align: center;
   font-size: 1.5rem;
@@ -33,8 +39,10 @@ class Counter extends React.Component {
     return (
       <Container>
         <Number>{this.state.count}</Number>
-        <Button onClick={this.increment}>+</Button>
-        <Button onClick={this.decrement}>-</Button>
+        <Column>
+          <Button onClick={this.increment}>+</Button>
+          <Button onClick={this.decrement}>-</Button>
+        </Column>
       </Container>
     );
   }
