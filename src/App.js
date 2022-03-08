@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './style.css';
 import styled from 'styled-components';
 import Counter from './Counter.js';
+import User from './User.js';
 
 const Name = styled.h1`
   font-size: 3rem;
@@ -69,6 +70,7 @@ export default function App() {
         </Button>
       </Column>
       <Counter></Counter>
+      <User></User>
     </div>
   );
 }
